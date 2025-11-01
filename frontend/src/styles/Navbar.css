@@ -1,0 +1,355 @@
+.navbar {
+  background: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar h2 a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar h2 a:hover {
+  color: var(--primary-color) !important;
+}
+
+.navtext {
+  color: white;
+  transition: 0.2s color ease-in-out;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.navtext:hover {
+  color: var(--primary-color);
+}
+
+.navtext.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.navtext.admin-active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.navtext.admin-hover:hover {
+  color: var(--primary-color);
+}
+
+.logbtn {
+  border: 1px solid var(--primary-color);
+  transition: 0.2s all ease;
+  border-radius: 40px;
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 10px 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logbtn:hover {
+  color: var(--primary-color);
+  background-color: #f8f9fa;
+  border-color: var(--primary-color);
+}
+
+.regbtn {
+  background-color: var(--primary-color);
+  transition: 0.2s all;
+  border-radius: 40px;
+  font-weight: 500;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.regbtn:hover {
+  background-color: var(--primary-hover);
+  color: white;
+}
+
+.admin-profile-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 40px;
+  font-weight: 500;
+  transition: 0.2s all ease;
+  padding: 10px 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.admin-profile-btn:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: white;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+}
+
+.hamburger {
+  width: 25px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--primary-color);
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu-content {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.mobile-menu-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.mobile-close-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-close-btn:hover {
+  background-color: #e9ecef;
+}
+
+.close-icon {
+  font-size: 24px;
+  color: #6c757d;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-list {
+  list-style: none;
+  padding: 20px;
+  margin: 0 0 30px 0;
+  flex: 1;
+}
+
+.mobile-nav-list li {
+  margin-bottom: 15px;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.mobile-nav-link:hover {
+  background-color: #f8f9fa;
+  color: var(--primary-color);
+}
+
+.mobile-nav-link.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.mobile-nav-link.admin-active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Mobile Auth Buttons */
+.mobile-auth-buttons {
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.mobile-btn {
+  padding: 12px 20px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mobile-login-btn {
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.mobile-login-btn:hover {
+  background-color: #f8f9fa;
+  color: var(--primary-color);
+}
+
+.mobile-register-btn,
+.mobile-logout-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.mobile-register-btn:hover,
+.mobile-logout-btn:hover {
+  background-color: var(--primary-hover);
+  color: white;
+}
+
+.mobile-admin-profile-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.mobile-admin-profile-btn:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 12px 16px !important;
+  }
+  
+  .navbar h2 {
+    font-size: 1.5rem;
+  }
+  
+  .mobile-menu {
+    width: 100%;
+    right: -100%;
+  }
+  
+  .mobile-menu.active {
+    right: 0;
+  }
+}
