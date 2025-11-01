@@ -1,0 +1,13 @@
+{
+  "name": "equipment-lending-seed",
+  "version": "1.0.0",
+  "description": "Seed script for School Equipment Lending Portal",
+  "main": "seed.js",
+  "scripts": {
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.5",
+    "bcryptjs": "^2.4.3"
+  }
+}
